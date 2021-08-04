@@ -1,0 +1,24 @@
+데이터분석및이미지처리
+httpsgithub.comndb796Python-Data-Analysis-and-Image-Processing-Tutorial
+
+혼자공부하는머신러닝딥러닝
+https://github.com/rickiepark/hg-mldl
+
+유튜브 검색
+박해선 혼자공부하는
+나동빈 데이터분석및이미지
+
+matplotlib
+sklearn 
+spring 강좌
+
+머신러닝에는
+1. 분류 classfy
+2. 예측(회귀)
+3. 군집 비지도
+
+
+spring
+
+https://github.com/madvirus/spring5fs
+
