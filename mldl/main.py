@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
+import numpy as np
 from flask import Flask , render_template, request
 from sklearn.neighbors import KNeighborsClassifier
 
+import numpy as npa
 
 # Flask app = new Flask(__name__)
 app = Flask(__name__)
@@ -30,17 +32,23 @@ smelt_weight = [6.7, 7.5, 7.0, 9.7, 9.8, 8.7, 10.0, 9.9, 9.8, 12.2, 13.4, 12.2, 
 
 plt.scatter(bream_length, bream_weight,marker='*',c='r')  # 산점도
 plt.scatter(smelt_length,smelt_weight,marker='D',c='b')
-plt.scatter([30,10],[600,20], marker='^',c='yellow')
+plt.scatter([30,10],[25,600], marker='^',c='yellow')
 plt.xlabel('length')
 plt.ylabel('weight')
 # plt.show()
 plt.savefig('static/bream.png')
+plt.close()
 
 length = bream_length+smelt_length
 weight = bream_weight+smelt_weight
 
+#nap = np.array(bream_length)
+#print(npa.shape)
+#print(len(npa))
+
 fish_data = [[l,w] for l, w in zip(length,weight)]
-fish_target = ['bream']*35+['smelt']*14  #[1]*35+[0]*14
+#fish_target = ['bream']*35+['smelt']*14  #[1]*35+[0]*14
+fish_target = [1]*35+[0]*14
 
 print(['bream',1,1,1,1,1,1,1,1])
 
@@ -68,7 +76,7 @@ def hom():
     prevalue=knc.predict([[int(inlength),int(inweight)]])
     print('prevalue',prevalue)
     str='bream'
-    if prevalue ==1:
+    if prevalue == 1:
         str = 'bream'
     else:
         str = 'smelt'
