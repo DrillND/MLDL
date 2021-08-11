@@ -37,8 +37,11 @@ plt.ylabel('weight')
 train_input, test_input, train_target, test_target = train_test_split(perch_length, perch_weight, random_state=42)
 
 print(train_input.shape)
+print(train_input)
 print(test_input.shape)
+print(test_input)
 print(train_target.shape)
+print(train_target)
 print(test_target.shape)
 
 # doCC() 내가 만든 함수 디렉토리 안에 넣어 놓은 것
@@ -63,6 +66,7 @@ print(test_array)
 train_input = train_input.reshape(-1, 1)
 test_input = test_input.reshape(-1, 1)
 
+print('d야야',train_input)
 knr = KNeighborsRegressor()
 knr.fit(train_input, train_target)
 
