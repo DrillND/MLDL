@@ -1,9 +1,9 @@
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy as np # numpy 배열을 더 좋게 관리 하는 라이브러리
+import matplotlib.pyplot as plt # 그래프 그리는 데이터 시각화
 
-from sklearn.model_selection import  train_test_split
-from sklearn.neighbors import KNeighborsRegressor #학습 리그레서
-from sklearn.linear_model import LinearRegression #선형회귀 모델
+from sklearn.model_selection import  train_test_split # 훈련데이터 테스트 데이터 나누는 것
+from sklearn.neighbors import KNeighborsRegressor #학습 리그레서 최근접이웃좌표 평균값 구해주는 것
+from sklearn.linear_model import LinearRegression #선형회귀 모델 예측 클래스 모델
 
 perch_length = np.array(
     [8.4, 13.7, 15.0, 16.2, 17.4, 18.0, 18.7, 19.0, 19.6, 20.0,
