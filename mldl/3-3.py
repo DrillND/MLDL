@@ -81,3 +81,20 @@ test_poly = poly.transform(test_input)
 
 print(poly.get_feature_names())
 print(train_poly.shape)
+
+
+from sklearn.preprocessing import StandardScaler
+
+ss = StandardScaler()
+ss.fit(train_poly)
+
+train_scaled = ss.transform(train_poly)
+test_scaled = ss.transform(test_poly)
+
+from sklearn.linear_model import Ridge
+
+ridge = Ridge()
+ridge.fit(train_scaled, train_target)
+print(ridge.score(train_scaled, train_target))
+
+print(ridge.score(test_scaled, test_target))
