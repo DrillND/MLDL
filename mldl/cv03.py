@@ -8,7 +8,8 @@ print(roi.shape)
 
 image[0:290,0:250] = roi
 
-image[:,:,0] = 0
+'''b g r 순서 '''
+image[300:,300:,0] = 0
 cv2.imshow('image',image)
 cv2.waitKey(0)
 

@@ -1,6 +1,7 @@
 import numpy as np # numpy 배열을 더 좋게 관리 하는 라이브러리
 import matplotlib.pyplot as plt # 그래프 그리는 데이터 시각화
 
+
 from sklearn.model_selection import  train_test_split # 훈련데이터 테스트 데이터 나누는 것
 from sklearn.neighbors import KNeighborsRegressor #학습 리그레서 최근접이웃좌표 평균값 구해주는 것
 from sklearn.linear_model import LinearRegression #선형회귀 모델 예측 클래스 모델
@@ -94,3 +95,9 @@ plt.show()
 
 print(lr.score(train_poly, train_target))
 print(lr.score(test_poly, test_target))
+
+import cv2
+img=cv2.imread('main.jpg',cv2.IMREAD_COLOR)
+rgbimg=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY);
+plt.imshow(rgbimg)
+plt.show()
