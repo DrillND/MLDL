@@ -20,4 +20,5 @@ def speak(text):
     tts.save(filename)
     playsound.playsound(filename)
 
+
 speak("3시 41분 입니다. 45분에 시작하죠")
